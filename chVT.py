@@ -30,7 +30,7 @@ class vtAPI():
         print "\n\tVirus Total Rescan Initiated for -- " + md5 + " (Requery in 10 Mins)"
         jdata = json.loads(result.read())
         return jdata
-
+aaa
 
 # Md5 Function
 
