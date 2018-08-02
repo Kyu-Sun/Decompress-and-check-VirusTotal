@@ -157,7 +157,7 @@ def reUnzip(path):
 
 
 def main():
-    file_list = reUnzip("C:\\Users\\NFS\\Desktop\\test\\test2\\test3\\")
+    file_list = reUnzip("C:\\Users\\NFS\\Desktop\\test\\test2\\test4\\")
     md5_list = list()
     cnt = 0;
     for file_name in file_list:
@@ -168,13 +168,13 @@ def main():
         if md5 not in md5_list:
             md5_list.append(md5)
 
-            vt = vtAPI("publicKey.txt")
-            vt.rescan(md5)
-            parse(vt.getReport(md5), md5, file_name)
+           # vt = vtAPI("publicKey.txt")
+           # vt.rescan(md5)
+           # parse(vt.getReport(md5), md5, file_name)
             cnt = cnt + 1;
             print cnt
-            if cnt % 2 == 0:
-                sleep(60)
+           # if cnt % 2 == 0:
+           #     sleep(60)
 
     print len(file_list)
     print len(md5_list)
